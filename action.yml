@@ -29,10 +29,6 @@ inputs:
     description: 'Allow action to run on forks'
     required: false
     default: false
-  other_args:
-    description: 'Other args'
-    required: false
-    default: ''
   user_name:
     description: 'User name for git commits'
     required: false
@@ -45,6 +41,9 @@ inputs:
     description: 'Environment variable containing the token to use for push'
     required: false
     default: 'GITHUB_TOKEN'
+  other_args:
+    description: 'Other args'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -71,7 +71,7 @@ echo
 set -o xtrace
 
 # Do the merge
-git merge $FF_MODE $OTHER_ARGS --no-edit $INPUT_STABLE_BRANCH
+git merge $FF_MODE $INPUT_OTHER_ARGS --no-edit $INPUT_STABLE_BRANCH
 
 # Pull lfs if enabled
 if [[ $INPUT_GIT_LFS == "true" ]]; then

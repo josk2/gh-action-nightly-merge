@@ -1,5 +1,5 @@
-name: 'Nightly Merge'
-description: 'Automatically merge the stable branch into the development one.'
+name: 'Auto - Nightly Merge'
+description: 'Automatically merge the stable branch into the development one. Fork from https://github.com/robotology/gh-action-nightly-merge'
 author: 'Daniele E. Domenichelli'
 branding:
   icon: 'git-merge'
@@ -29,10 +29,6 @@ inputs:
     description: 'Allow action to run on forks'
     required: false
     default: false
-  other_args:
-    description: 'Other args'
-    required: false
-    default: ''
   user_name:
     description: 'User name for git commits'
     required: false
@@ -45,6 +41,9 @@ inputs:
     description: 'Environment variable containing the token to use for push'
     required: false
     default: 'GITHUB_TOKEN'
+  other_args:
+    description: 'Other args'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

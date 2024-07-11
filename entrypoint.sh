@@ -14,7 +14,6 @@ echo "    - user_name = $INPUT_USER_NAME"
 echo "    - user_email = $INPUT_USER_EMAIL"
 echo "    - push_token = $INPUT_PUSH_TOKEN = ${!INPUT_PUSH_TOKEN}"
 echo "    - other_args = $INPUT_OTHER_ARGS"
-echo  "TEST $GITHUB_REPOSITORY"
 echo
 
 if [[ $INPUT_ALLOW_FORKS != "true" ]]; then
@@ -72,7 +71,7 @@ echo
 set -o xtrace
 
 # Do the merge
-git merge $FF_MODE $OTHER_ARGS --no-edit $INPUT_STABLE_BRANCH
+git merge $FF_MODE $INPUT_OTHER_ARGS --no-edit $INPUT_STABLE_BRANCH
 
 # Pull lfs if enabled
 if [[ $INPUT_GIT_LFS == "true" ]]; then

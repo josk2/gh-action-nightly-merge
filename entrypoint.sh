@@ -13,7 +13,8 @@ echo "    - allow_forks = $INPUT_ALLOW_FORKS"
 echo "    - user_name = $INPUT_USER_NAME"
 echo "    - user_email = $INPUT_USER_EMAIL"
 echo "    - push_token = $INPUT_PUSH_TOKEN = ${!INPUT_PUSH_TOKEN}"
-echo "    - other_args = $OTHER_ARGS"
+echo "    - other_args = $INPUT_OTHER_ARGS"
+echo  "TEST $GITHUB_REPOSITORY"
 echo
 
 if [[ $INPUT_ALLOW_FORKS != "true" ]]; then
